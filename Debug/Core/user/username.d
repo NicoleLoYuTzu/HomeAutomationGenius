@@ -34,9 +34,9 @@ Core/user/username.o: ../Core/user/username.cpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  ../Core/Inc/usart.h ../Core/Inc/main.h ../Core/Inc/gpio.h \
- ../Core/Inc/i2c.h ../Core/user/irTime.h ../Core/Inc/tim.h \
- ../Core/user/../../ssd1306/ssd1306.h ../Core/user/../../ssd1306/fonts.h \
- ../Core/user/../../ssd1306/fonts.h
+ ../Core/Inc/i2c.h ../Core/user/../../ssd1306/ssd1306.h \
+ ../Core/user/../../ssd1306/fonts.h ../Core/user/irTime.h \
+ ../Core/Inc/tim.h ../Core/user/ir_parser.h
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:
@@ -75,8 +75,8 @@ Core/user/username.o: ../Core/user/username.cpp \
 ../Core/Inc/main.h:
 ../Core/Inc/gpio.h:
 ../Core/Inc/i2c.h:
-../Core/user/irTime.h:
-../Core/Inc/tim.h:
 ../Core/user/../../ssd1306/ssd1306.h:
 ../Core/user/../../ssd1306/fonts.h:
-../Core/user/../../ssd1306/fonts.h:
+../Core/user/irTime.h:
+../Core/Inc/tim.h:
+../Core/user/ir_parser.h:

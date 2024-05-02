@@ -20,26 +20,26 @@ typedef struct
 {
 	uint32_t time;
 	IR_STATE state;
-} IR_EVENT;
+} IrSignal;
 
 /**	Timer in 10 us resolution.
  *
  */
-class IrTiming
+class IrSignalTime
 {
 public:
-	IrTiming();
+	IrSignalTime();
 
 	void	put(IR_STATE state);
-	IR_EVENT	get();
-	bool	hasEvent() {return m_size > 0;}
+	IrSignal	get();
+	bool	signalIn() {return m_size > 0;}
 
 private:
 	int m_head;
 	int m_tail;
 	int m_size;
 
-	IR_EVENT m_timing[IR_TIME_NO];
+	IrSignal m_timing[IR_TIME_NO];
 };
 
 #endif /* IRTIME_H_ */

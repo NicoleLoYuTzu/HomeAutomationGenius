@@ -12,7 +12,7 @@ uint32_t sys_tick_10us = 0;
 /**	\brief Constructor.
  *
  */
-IrTiming::IrTiming()
+IrSignalTime::IrSignalTime()
 {
 	m_head = 0;
 	m_tail = 0;
@@ -23,7 +23,7 @@ IrTiming::IrTiming()
  *
  *	called by ISR only.
  */
-void IrTiming::put(IR_STATE state)
+void IrSignalTime::put(IR_STATE state)
 {
 	if (m_size >= IR_TIME_NO)
 		Error_Handler();
@@ -41,14 +41,14 @@ void IrTiming::put(IR_STATE state)
 /**	\brief	Get state and time from queue.
  *
  */
-IR_EVENT IrTiming::get()
+IrSignal IrSignalTime::get()
 {
-	const IR_EVENT nul = {0, SPACE};
+	const IrSignal nul = {0, SPACE};
 
 	if (m_size == 0)
 		return nul;
 
-	IR_EVENT time = m_timing[m_head];
+	IrSignal time = m_timing[m_head];
 
 	__disable_irq();
 	m_size--;
