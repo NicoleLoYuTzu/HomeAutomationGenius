@@ -81,6 +81,7 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color);
 char ssd1306_WriteString(const char* str, FontDef Font, SSD1306_COLOR color);
 void ssd1306_SetCursor(uint8_t x, uint8_t y);
 void ssd1306_InvertColors(void);
+void ssd1306_printf(FontDef Font, SSD1306_COLOR color, const char *format, ...);
 
 
 

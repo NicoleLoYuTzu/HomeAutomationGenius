@@ -154,27 +154,50 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color)
     // Check remaining space on current line
     if (SSD1306_WIDTH <= (SSD1306.CurrentX + Font.FontWidth) ||
         SSD1306_HEIGHT <= (SSD1306.CurrentY + Font.FontHeight))
-    {
         // Not enough space on current line
         return 0;
+
+
+    if (Font.FontWidth == Font_5x7.FontWidth)
+    {
+    	uint8_t *pdata = (uint8_t *) Font.data;
+		for (int x = 0; x < Font.FontWidth; x++)
+		{
+			uint8_t b = (ch < 0x80) ?
+					(x < Font.FontWidth - 1) ? pdata[(ch - 32) * (Font.FontWidth - 1) + x] : 0 :
+					(x < Font.FontWidth - 1) ? 0x7f : 0;
+			for (int y = 0; y < Font.FontHeight; y++)
+			{
+				if (b & 1)
+					ssd1306_DrawPixel(SSD1306.CurrentX+x, (SSD1306.CurrentY+y), (SSD1306_COLOR) color);
+				else
+					ssd1306_DrawPixel(SSD1306.CurrentX+x, (SSD1306.CurrentY+y), (SSD1306_COLOR)!color);
+				b >>= 1;
+			}
+		}
+    }
+    else
+    {
+    	   for (i = 0; i < Font.FontHeight; i++)
+    	    {
+    	        b = Font.data[(ch - 32) * Font.FontHeight + i];
+    	        for (j = 0; j < Font.FontWidth; j++)
+    	        {
+    	            if ((b << j) & 0x8000)
+    	            {
+    	                ssd1306_DrawPixel(SSD1306.CurrentX + j, (SSD1306.CurrentY + i), (SSD1306_COLOR) color);
+    	            }
+    	            else
+    	            {
+    	                ssd1306_DrawPixel(SSD1306.CurrentX + j, (SSD1306.CurrentY + i), (SSD1306_COLOR)!color);
+    	            }
+    	        }
+    	    }
     }
 
+
     // Translate font to screenbuffer
-    for (i = 0; i < Font.FontHeight; i++)
-    {
-        b = Font.data[(ch - 32) * Font.FontHeight + i];
-        for (j = 0; j < Font.FontWidth; j++)
-        {
-            if ((b << j) & 0x8000)
-            {
-                ssd1306_DrawPixel(SSD1306.CurrentX + j, (SSD1306.CurrentY + i), (SSD1306_COLOR) color);
-            }
-            else
-            {
-                ssd1306_DrawPixel(SSD1306.CurrentX + j, (SSD1306.CurrentY + i), (SSD1306_COLOR)!color);
-            }
-        }
-    }
+
 
     // The current space is now taken
     SSD1306.CurrentX += Font.FontWidth;

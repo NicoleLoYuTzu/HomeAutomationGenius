@@ -1,6 +1,13 @@
 #ifndef _FONTS_H
 #define _FONTS_H
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
 #include <stdint.h>
 
 //
@@ -18,5 +25,10 @@ typedef struct {
 extern FontDef Font_7x10;
 extern FontDef Font_11x18;
 extern FontDef Font_16x26;
+extern FontDef Font_5x7;	// user defined
 
-#endif  // _FONTS_H
+#ifdef __cplusplus
+}
+#endif
+
+#endif

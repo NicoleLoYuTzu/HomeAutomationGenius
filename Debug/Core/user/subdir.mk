@@ -6,16 +6,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Core/user/irTime.cpp \
+../Core/user/ir_parser.cpp \
 ../Core/user/retarget.cpp \
 ../Core/user/username.cpp 
 
 OBJS += \
 ./Core/user/irTime.o \
+./Core/user/ir_parser.o \
 ./Core/user/retarget.o \
 ./Core/user/username.o 
 
 CPP_DEPS += \
 ./Core/user/irTime.d \
+./Core/user/ir_parser.d \
 ./Core/user/retarget.d \
 ./Core/user/username.d 
 
@@ -27,7 +30,7 @@ Core/user/%.o Core/user/%.su Core/user/%.cyclo: ../Core/user/%.cpp Core/user/sub
 clean: clean-Core-2f-user
 
 clean-Core-2f-user:
-	-$(RM) ./Core/user/irTime.cyclo ./Core/user/irTime.d ./Core/user/irTime.o ./Core/user/irTime.su ./Core/user/retarget.cyclo ./Core/user/retarget.d ./Core/user/retarget.o ./Core/user/retarget.su ./Core/user/username.cyclo ./Core/user/username.d ./Core/user/username.o ./Core/user/username.su
+	-$(RM) ./Core/user/irTime.cyclo ./Core/user/irTime.d ./Core/user/irTime.o ./Core/user/irTime.su ./Core/user/ir_parser.cyclo ./Core/user/ir_parser.d ./Core/user/ir_parser.o ./Core/user/ir_parser.su ./Core/user/retarget.cyclo ./Core/user/retarget.d ./Core/user/retarget.o ./Core/user/retarget.su ./Core/user/username.cyclo ./Core/user/username.d ./Core/user/username.o ./Core/user/username.su
 
 .PHONY: clean-Core-2f-user
 
