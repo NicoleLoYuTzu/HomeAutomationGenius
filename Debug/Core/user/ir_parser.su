@@ -1,3 +1,0 @@
-../Core/user/ir_parser.cpp:13:1:IR_Parser::IR_Parser()	16	static
-../Core/user/ir_parser.cpp:21:10:IR_State IR_Parser::proc_IRsignal(int)	80	static
-../Core/user/ir_parser.cpp:100:6:bool IR_Parser::check_IRcode()	24	static

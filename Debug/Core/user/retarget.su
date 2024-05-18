@@ -1,4 +1,0 @@
-../Core/user/retarget.cpp:13:6:void RetargetInit(UART_HandleTypeDef*)	16	static
-../Core/user/retarget.cpp:19:5:int _write(int, char*, int)	32	static
-../Core/user/retarget.cpp:34:5:int _read(int, char*, int)	32	static
-../Core/user/retarget.cpp:58:5:int __io_getchar()	16	static

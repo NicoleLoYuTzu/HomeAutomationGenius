@@ -25,8 +25,6 @@ extern "C"{
 
 
 
-
-
 // I2c address
 #ifndef SSD1306_I2C_ADDR
 #define SSD1306_I2C_ADDR        0x78
@@ -50,7 +48,7 @@ extern "C"{
 #define SSD1306_COM_ALTERNATIVE_PIN_CONFIG    1
 #endif // SSD1306_COM_ALTERNATIVE_PIN_CONFIG
 
-
+#define oled_i2c  hi2c1
 //
 //  Enumeration for screen colors
 //

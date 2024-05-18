@@ -1,0 +1,10 @@
+../Core/user/ir/ir_receiver.h:29:11:uint16_t IR_Receiver::GetCode()	16	static
+../Core/user/ir/ir_receiver.h:30:14:const char* IR_Receiver::GetController()	16	static
+../Core/user/ir/ir_receiver.h:31:14:const char* IR_Receiver::GetBtnName()	16	static
+../Core/user/ir/ir_receiver.h:32:7:void IR_Receiver::ResetState()	16	static
+../Core/user/ir/ir_receiver.cpp:30:6:void IR_Receiver::processing()	32	static
+../Core/user/ir/ir_receiver.cpp:67:6:void IR_Receiver::ShowIrCode(IR_State)	56	static
+../Core/user/ir/ir_receiver.cpp:133:10:IR_State IR_Receiver::proc_IRsignal(int)	128	static
+../Core/user/ir/ir_receiver.cpp:251:6:bool IR_Receiver::check_IRcode()	24	static
+../Core/user/ir/ir_receiver.cpp:282:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../Core/user/ir/ir_receiver.cpp:282:1:cpp)	8	static
