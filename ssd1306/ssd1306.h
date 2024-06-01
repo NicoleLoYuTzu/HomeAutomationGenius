@@ -1,4 +1,6 @@
-/**
+/**	\file ssd1306.h
+ * 	\brief 4ilo 的 SSD1306 driver for STM32 HAL (標頭檔).
+ *
  * This Library is written and optimized by Olivier Van den Eede(4ilo) in 2016
  * for Stm32 Uc and HAL-i2c lib's.
  *
@@ -16,14 +18,17 @@
 #define _SSD1306_H
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-
-#include "stm32f7xx_hal.h"
+#include "i2c.h"
 #include "fonts.h"
 
-
+#if defined(STM32H755xx)
+ #define	oled_i2c	hi2c4
+#else
+ #define	oled_i2c	hi2c1
+#endif
 
 // I2c address
 #ifndef SSD1306_I2C_ADDR
@@ -48,7 +53,7 @@ extern "C"{
 #define SSD1306_COM_ALTERNATIVE_PIN_CONFIG    1
 #endif // SSD1306_COM_ALTERNATIVE_PIN_CONFIG
 
-#define oled_i2c  hi2c1
+
 //
 //  Enumeration for screen colors
 //
@@ -57,9 +62,9 @@ typedef enum {
     White = 0x01,   // Pixel is set. Color depends on LCD
 } SSD1306_COLOR;
 
-//
-//  Struct to store transformations
-//
+/**	\brief	Struct to store transformations
+ *
+ */
 typedef struct {
     uint16_t CurrentX;
     uint16_t CurrentY;
@@ -79,9 +84,8 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color);
 char ssd1306_WriteString(const char* str, FontDef Font, SSD1306_COLOR color);
 void ssd1306_SetCursor(uint8_t x, uint8_t y);
 void ssd1306_InvertColors(void);
+
 void ssd1306_printf(FontDef Font, SSD1306_COLOR color, const char *format, ...);
-
-
 
 #ifdef __cplusplus
 }

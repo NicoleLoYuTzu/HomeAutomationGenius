@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <stm32h7xx_hal.h>
+#include <stm32f7xx_hal.h>
 
 #include <cmsis_os2.h>
 #include <FreeRTOS.h>
@@ -122,15 +122,15 @@ int	proc_reset(void)
 {
 	if (g_parm[0] == '\0')
 	{
-	    if (__HAL_RCC_GET_FLAG(RCC_FLAG_LPWR2RST))
+	    if (__HAL_RCC_GET_FLAG(RCC_FLAG_LPWRRST))
 	    {
 			printf("Low Power reset\n");
 	    }
-	    else if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDG2RST))
+	    else if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST))
 	    {
 			printf("Window Watchdog reset\n");
 	    }
-	    else if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDG2RST))
+	    else if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST))
 	    {
 			printf("Independent Watchdog reset\n");
 	    }

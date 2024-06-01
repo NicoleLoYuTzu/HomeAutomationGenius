@@ -11,6 +11,7 @@
 #include "gpio.h"
 #include "usart.h"
 #include "i2c.h"
+#include <cstring>
 
 #include "ssd1306.h"
 #include "ir_receiver.h"
@@ -82,7 +83,7 @@ void usermain(void *argument)
 	/// - 設定下一個預期的 IR 信號狀態
 	/// - Get ENABLE_RELAY state
 	g_waitState = (HAL_GPIO_ReadPin(IRRX_GPIO_Port, IRRX_Pin) == GPIO_PIN_SET) ? MARK : SPACE;
-	g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
+//	g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
 
 	/// - 啟動 TIM3_CH3 輸出 38 KHz, Duty cycle 1/3 的 PWM 信號
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
@@ -164,8 +165,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		ir_sender.SendCode(hdrplayer.GetIrCode("POWER"));
 		break;
 
-	case ENABLE_RELAY_Pin:
-		g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
+//	case ENABLE_RELAY_Pin:
+//		g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
 		showRelayState();
 //		ssd1306_UpdateScreen(&oled_i2c);
 		break;
