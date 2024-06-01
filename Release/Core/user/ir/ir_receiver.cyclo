@@ -1,5 +1,0 @@
-../Core/user/ir/ir_receiver.cpp:67:6:void IR_Receiver::ShowIrCode(IR_State)	8
-../Core/user/ir/ir_receiver.cpp:251:6:bool IR_Receiver::check_IRcode()	7
-../Core/user/ir/ir_receiver.cpp:133:10:IR_State IR_Receiver::proc_IRsignal(int)	27
-../Core/user/ir/ir_receiver.cpp:30:6:void IR_Receiver::processing()	6
-../Core/user/ir/ir_receiver.cpp:282:1:cpp)	1

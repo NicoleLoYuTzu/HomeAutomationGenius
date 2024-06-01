@@ -1,4 +1,0 @@
-../Core/user/ir_relay/user/ir/ir_sender.cpp:13:1:IR_Sender::IR_Sender()	1
-../Core/user/ir_relay/user/ir/ir_sender.cpp:21:6:void IR_Sender::SendCode(uint32_t)	3
-../Core/user/ir_relay/user/ir/ir_sender.cpp:41:6:void IR_Sender::processing()	5
-../Core/user/ir_relay/user/ir/ir_sender.cpp:68:6:void IR_Sender::SetIR(bool)	2

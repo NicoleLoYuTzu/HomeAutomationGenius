@@ -1,4 +1,0 @@
-../Core/user/ir/ir_time.cpp:16:1:IR_Timing::IR_Timing()	1
-../Core/user/ir/ir_time.cpp:27:6:void IR_Timing::put(IR_STATE)	2
-../Core/user/ir/ir_time.cpp:45:10:IrSignal IR_Timing::get()	2
-../Core/user/ir/ir_time.cpp:66:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2

@@ -1,4 +1,0 @@
-../Core/user/ir/ir_sender.cpp:15:1:IR_Sender::IR_Sender()	8	static
-../Core/user/ir/ir_sender.cpp:32:6:void IR_Sender::SendCode(uint32_t, bool)	8	static
-../Core/user/ir/ir_sender.cpp:49:6:void IR_Sender::sendFrame()	16	static
-../Core/user/ir/ir_sender.cpp:23:6:void IR_Sender::processing()	0	static
