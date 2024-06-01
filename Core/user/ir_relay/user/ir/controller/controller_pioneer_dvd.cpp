@@ -5,7 +5,7 @@
  *      Author: ysliu
  */
 
-#include "ir_code.h"
+#include "../ir_code.h"
 
 #define	PioneerDVD	0xa35c
 

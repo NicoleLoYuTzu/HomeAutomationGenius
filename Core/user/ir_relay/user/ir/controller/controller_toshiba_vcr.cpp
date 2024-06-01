@@ -5,7 +5,7 @@
  *      Author: ysliu
  */
 
-#include "ir_code.h"
+#include "../ir_code.h"
 
 #define	ToshibaVCR	0x44bb
 

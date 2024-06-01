@@ -10,7 +10,7 @@
 
 #include "stdint.h"
 
-#define IR_TIME_NO	200
+#define IR_TIME_NO	1000
 
 #define NEC_TICK 	56
 #define TIME_ERROR	42

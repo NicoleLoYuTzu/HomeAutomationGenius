@@ -40,8 +40,9 @@ CPP_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
-Core/user/ir \
-Core/user \
+Core/user/ir_relay/ssd1306 \
+Core/user/ir_relay/user \
+Core/user/ir_relay/user/ir/controller \
+Core/user/ir_relay/user/ir \
 Drivers/STM32F7xx_HAL_Driver/Src \
-ssd1306 \
 

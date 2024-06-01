@@ -5,7 +5,7 @@
  *      Author: ysliu
  */
 
-#include "ir_code.h"
+#include "../ir_code.h"
 
 #define	HDR_PLAYER	0xff00
 

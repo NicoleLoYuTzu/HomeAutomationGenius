@@ -1,8 +1,0 @@
-../Core/user/../user/ir/ir_receiver.h:21:7:IR_Receiver::IR_Receiver()	1
-../Core/user/username.cpp:34:6:void usermain()	2
-../Core/user/username.cpp:55:6:void HAL_GPIO_EXTI_Callback(uint16_t)	4
-../Core/user/username.cpp:72:6:void init_oled()	3
-../Core/user/username.cpp:97:6:void flash_LD1()	2
-../Core/user/username.cpp:119:16:int __io_putchar(int)	1
-../Core/user/username.cpp:125:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/user/username.cpp:125:1:cpp)	1

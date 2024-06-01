@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define BTN_GPIO_Port GPIOC
 #define MCO_Pin GPIO_PIN_0
 #define MCO_GPIO_Port GPIOH
+#define IRTX_Pin GPIO_PIN_0
+#define IRTX_GPIO_Port GPIOC
 #define RMII_MDC_Pin GPIO_PIN_1
 #define RMII_MDC_GPIO_Port GPIOC
 #define RMII_REF_CLK_Pin GPIO_PIN_1
@@ -83,9 +85,9 @@ void Error_Handler(void);
 #define STLK_RX_GPIO_Port GPIOD
 #define STLK_TX_Pin GPIO_PIN_9
 #define STLK_TX_GPIO_Port GPIOD
-#define IRDA_Pin GPIO_PIN_2
-#define IRDA_GPIO_Port GPIOG
-#define IRDA_EXTI_IRQn EXTI2_IRQn
+#define IRRX_Pin GPIO_PIN_2
+#define IRRX_GPIO_Port GPIOG
+#define IRRX_EXTI_IRQn EXTI2_IRQn
 #define USB_PowerSwitchOn_Pin GPIO_PIN_6
 #define USB_PowerSwitchOn_GPIO_Port GPIOG
 #define USB_OverCurrent_Pin GPIO_PIN_7

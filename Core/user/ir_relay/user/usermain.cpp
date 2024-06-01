@@ -12,10 +12,10 @@
 #include "usart.h"
 #include "i2c.h"
 
-#include "ssd1306.h"
+#include "../../ssd1306/ssd1306.h"
 #include "ir_receiver.h"
-#include "ir_sender.h"
-#include "ir_code.h"
+#include "../ir_sender.h"
+#include "../ir_code.h"
 
 #include "usermain.h"
 
@@ -38,7 +38,7 @@ void usermain()
 
 	// initial next wait state
 	g_waitState = (HAL_GPIO_ReadPin(IRRX_GPIO_Port, IRRX_Pin) == GPIO_PIN_SET) ? MARK : SPACE;
-	g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
+//	g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
 
 	init_oled();
 
@@ -79,11 +79,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		ir_sender.SendCode(hdrplayer.GetIrCode("POWER"));
 		break;
 
-	case ENABLE_RELAY_Pin:
-		g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
-		showRelayState();
-		ssd1306_UpdateScreen(&oled_i2c);
-		break;
+//	case ENABLE_RELAY_Pin:
+//		g_bEnableRelay = (HAL_GPIO_ReadPin(ENABLE_RELAY_GPIO_Port, ENABLE_RELAY_Pin) == GPIO_PIN_RESET) ? true : false;
+//		showRelayState();
+//		ssd1306_UpdateScreen(&oled_i2c);
+//		break;
 	}
 }
 

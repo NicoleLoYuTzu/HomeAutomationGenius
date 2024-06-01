@@ -68,5 +68,5 @@ void	IR_Sender::processing()
 void	IR_Sender::SetIR(bool bOn)
 {
 	HAL_GPIO_WritePin(IRTX_GPIO_Port, IRTX_Pin, bOn ? GPIO_PIN_SET : GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(IRTX2_GPIO_Port, IRTX2_Pin, bOn ? GPIO_PIN_RESET : GPIO_PIN_SET);
+	//AL_GPIO_WritePin(IRTX2_GPIO_Port, IRTX2_Pin, bOn ? GPIO_PIN_RESET : GPIO_PIN_SET);
 }

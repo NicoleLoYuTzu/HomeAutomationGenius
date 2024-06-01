@@ -1,2 +1,0 @@
-../Core/user/ir/ir_code.cpp:13:1:IR_CodeTable::IR_CodeTable(const char*, uint16_t, const IR_CODE*, int)	1
-../Core/user/ir/ir_code.cpp:24:6:bool IR_CodeTable::FindKey(uint8_t, const char**, const char**)	3

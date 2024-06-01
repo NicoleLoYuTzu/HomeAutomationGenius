@@ -22,7 +22,7 @@ extern "C" {
 #include "i2c.h"
 #include "fonts.h"
 
-#define	oled_i2c	hi2c4
+#define	oled_i2c	hi2c1
 
 // I2c address
 #ifndef SSD1306_I2C_ADDR

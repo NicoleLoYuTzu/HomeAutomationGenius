@@ -3,17 +3,18 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
 #include "gpio.h"
 #include "i2c.h"
-#include "ssd1306.h"
+#include "../../ssd1306/ssd1306.h"
 
 #include "ir_receiver.h"
 #include "ir_sender.h"
 #include "ir_code.h"
 
-bool g_bEnableRelay = false;
+bool g_bEnableRelay = true;
 
 extern IR_CodeTable mod;
 extern IR_CodeTable casio;
@@ -118,7 +119,7 @@ void	IR_Receiver::ShowIrCode(IR_State state)
 			repeatX = 0;
 			repeatY = 16;
 
-			if (g_bEnableRelay && strcmp(pController, "HDR player") == 0)
+			if (g_bEnableRelay && strcmp(pController, "CASIO") == 0)
 			{
 				m_bWaitToRelay = true;
 				m_pRelayBtnName = pBtnName;
